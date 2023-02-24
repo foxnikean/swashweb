@@ -1,0 +1,74 @@
+.formContainer {
+    background-image: url("../../assets/bg-form.jpg");
+    width: 100%;
+    margin-left: 303px;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4.35em;
+    padding: 4em;
+    background-color: hsl(0, 0%, 2%, 90%);
+    color: #f6f6f6;
+    width: 50%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.75em;
+    width: 100%;
+    input {
+        width: 100%;
+        height: 50px;
+        font-size: 1.25rem;
+        padding: 0 1em;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 3px solid #58287F;
+        color: #fefefe;
+    }
+}
+
+.checkboxContainer {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    .checkbox {
+        background: transparent;
+        border: 2px solid #58287F;
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.submitButton {
+    width: 50%;
+    height: 36px;
+    border-radius: 50px;
+    border: none;
+    background-color: #58287F;
+    color: #f6f6f6;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        background-color: #8544bb;
+    }
+}
+
+.formError {
+    color: #AF9CD5;
+    font-size: 0.75rem;
+    align-self: flex-start;
+    margin-top: -2.5em;
+}
