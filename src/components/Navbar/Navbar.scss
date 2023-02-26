@@ -1,4 +1,4 @@
-.container {
+.nav-container {
     height: 100vh;
     position: fixed;
     width: 303px;
@@ -19,13 +19,13 @@
     justify-content: flex-start;
 }
 
-.navList {
+.nav-list {
     display: flex;
     flex-direction: column;
     gap: 5.375rem;
     align-items: flex-start;
     list-style: none;
-    .navLink {
+    .nav-link {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -42,7 +42,7 @@
             color: #AF9CD5;
         }
     }
-    .userLink {
+    .user-link {
         text-decoration: none;
         color: #fefefe;
         display: flex;
@@ -55,7 +55,9 @@
             transition: all 0.2s ease-in-out;
         }
         img {
-            width: 2.75rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 100%;
             display: flex;
         }
     }

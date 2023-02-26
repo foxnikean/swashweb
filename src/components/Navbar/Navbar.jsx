@@ -1,17 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 //css
 import "./Navbar.scss";
 //assets
-import logo from "../../assets/logo.svg"
+import logo from "../../assets/logo.svg";
 import profilePic from "../../assets/profilePic.png";
-import { BiBookContent, BiCategory, BiFoodMenu, BiHomeAlt } from "react-icons/bi";
+import {
+  BiBookContent,
+  BiCategory,
+  BiFoodMenu,
+  BiHomeAlt,
+} from "react-icons/bi";
 import { Link } from "react-router-dom";
 import useAuthentication from "../../utils/useAuthHook";
 import { signOut } from "firebase/auth";
 import { auth } from "../../utils/firebase";
+import { useDispatch, useSelector } from "react-redux";
+import { getUserAsync } from '../../stores/userSlice'
 
 const Navbar = () => {
-  const {user} = useAuthentication()
+  const count = useSelector((state) => state.userData.data)
+  const dispatch = useDispatch()
+  const { user } = useAuthentication();
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
@@ -26,20 +35,28 @@ const Navbar = () => {
   const navItems = [
     { icon: <BiHomeAlt />, label: "Anasayfa", path: "/" },
     { icon: <BiBookContent />, label: "İletişim", path: "/contact" },
-    { icon: <BiCategory/>, label: "Etkinlikler", path: "/events" },
-    { icon: <BiFoodMenu/>, label: "Yardım", path: "/help" },
+    { icon: <BiCategory />, label: "Etkinlikler", path: "/events" },
+    { icon: <BiFoodMenu />, label: "Yardım", path: "/help" },
   ];
+
+  useEffect(() => {
+    dispatch(getUserAsync())
+  }, [user]);
   return (
-    <div className='container'>
+    <div className='nav-container'>
       <nav className='nav'>
         <img onClick={handleLogout} src={logo} alt='' />
-        <ul className='navList'>
+        <ul className='nav-list'>
           {navItems.map((item, i) => (
-            <Link key={i} className='navLink' to={item.path}>
-              <span className="icon">{item.icon}</span> <span>{item.label}</span>{" "}
+            <Link key={i} className='nav-link' to={item.path}>
+              <span className='icon'>{item.icon}</span>{" "}
+              <span>{item.label}</span>{" "}
             </Link>
           ))}
-          <Link to="/register" className="userLink"><img src={user ? "user-pic" : profilePic} alt="profilePic" /> <span>{user ? "username" : "Kayıt Ol"}</span></Link>
+          <Link to='/register' className='user-link'>
+            <img className="user-pic" src={user ? user.photoURL : "profile-pic"} alt='profilePic' />{" "}
+            <span>{user ? user.displayName : "Kayıt Ol"}</span>
+          </Link>
         </ul>
       </nav>
     </div>
