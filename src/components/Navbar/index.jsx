@@ -11,11 +11,11 @@ import {
   BiHomeAlt,
 } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import useAuthentication from "../../utils/useAuthHook";
 import { signOut } from "firebase/auth";
 import { auth } from "../../utils/firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserAsync } from '../../stores/userSlice'
+import useAuthentication from "../../utils/useAuthHook";
 
 const Navbar = () => {
   const count = useSelector((state) => state.userData.data)
