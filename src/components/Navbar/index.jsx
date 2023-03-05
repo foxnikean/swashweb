@@ -9,6 +9,7 @@ import {
   BiCategory,
   BiFoodMenu,
   BiHomeAlt,
+  BiMessageSquareMinus,
 } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { signOut } from "firebase/auth";
@@ -37,6 +38,7 @@ const Navbar = () => {
     { icon: <BiBookContent />, label: "İletişim", path: "/contact" },
     { icon: <BiCategory />, label: "Etkinlikler", path: "/events" },
     { icon: <BiFoodMenu />, label: "Yardım", path: "/help" },
+    { icon: <BiMessageSquareMinus />, label: "Organizatör", path: "/org" },
   ];
 
   useEffect(() => {
