@@ -4,7 +4,7 @@ const auth = getAuth();
 
 
 
-export function useAuthentication() {
+export default function useAuthentication() {
     const [user, setUser] = useState();
 
     useEffect(() => {
