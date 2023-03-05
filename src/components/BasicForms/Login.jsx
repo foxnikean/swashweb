@@ -3,7 +3,7 @@ import "./Forms.scss";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import login from "../../services/auth/Login";
 
 const schema = z.object({
@@ -41,16 +41,8 @@ const Login = () => {
             <p className='form-error'>{errors.password?.message}</p>
           )}
 
-          <div className='checkboxContainer'>
-            <input
-              id='checkbox'
-              {...register("checkbox")}
-              className='checkbox'
-              type='checkbox'
-            />
-            <label htmlFor='checkbox'>Beni Hatırla</label>
-          </div>
-          <button className='submit-button'>Submit</button>
+          <button className='submit-button'>Giriş Yap</button>
+          <span>Üye değil misin ? <Link to="/register" className="underline">Kayıt Ol</Link> </span>
         </form>
       </div>
     </div>

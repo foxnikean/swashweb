@@ -7,7 +7,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import * as z from "zod";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../utils/firebase";
 import registerUser from "../../services/auth/Register";
 
@@ -33,7 +33,7 @@ const Register = () => {
     <div className='form-container'>
       <div className='form-wrapper'>
         <h3 className='form-header'>Kayıt Ol </h3>
-        <form className='form' onSubmit={handleSubmit(onSubmit)}>
+        <form className='form min-w-96' onSubmit={handleSubmit(onSubmit)}>
           <input
             type='text'
             placeholder=' Kullanıcı Adı'
@@ -56,15 +56,16 @@ const Register = () => {
           )}
 
           <div className='checkbox-container'>
-            <div>
+            <div className="flex items-center gap-4">
               <input id='checkbox' className='checkbox' type='checkbox' />
-              <label htmlFor='checkbox'>Beni Hatırla</label>
+              <label htmlFor='checkbox'>Sözleşmeleri Kabul Ediyorum</label>
             </div>
             {errors.checkbox?.message && (
               <p className='form-error'>{errors.checkbox?.message}</p>
             )}
           </div>
-          <button className='submit-button'>Submit</button>
+          <button className='submit-button'>Kayıt Ol</button>
+          <span>Zaten bizdensen ? <Link to="/login" className="underline">Giriş Yap</Link> </span>
         </form>
       </div>
     </div>

@@ -92,7 +92,7 @@ const ProfileEdit = () => {
             )}
           </div>
           <button form='user-form' type='submit'>
-            Submit
+            Kaydol
           </button>
         </form>
       </div>
