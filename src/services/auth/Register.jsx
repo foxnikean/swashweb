@@ -31,3 +31,35 @@ export default function registerUser(data) {
       console.error(error);
     });
 }
+
+
+export  function registerOrg(data) {
+  createUserWithEmailAndPassword(auth, data.email, data.password)
+    .then(() => {
+      setDoc(doc(db, "users", auth.currentUser.uid), {
+        displayName: data.username,
+        email: data.email,
+        role:"organisator"
+      })
+        .then(() => {
+          console.log("succesfull database");
+        })
+        .then(() => {
+          updateProfile(auth.currentUser, {
+            displayName: data.username,
+          })
+            .then(() => {
+              // Profile updated!
+              navigate("/");
+              // ...
+            })
+            .catch((error) => {
+              // An error occurred
+              // ...
+            });
+        });
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}

@@ -1,32 +1,38 @@
 {
-  "name": "swashweb",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@hookform/resolvers": "^2.9.11",
-    "@reduxjs/toolkit": "^1.9.3",
-    "firebase": "^9.17.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-hook-form": "^7.43.2",
-    "react-icons": "^4.7.1",
-    "react-redux": "^8.0.5",
-    "react-router-dom": "^6.8.1",
-    "react-stacked-center-carousel": "^1.0.12",
-    "zod": "^3.20.6",
-    "zustand": "^4.3.3"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react": "^3.1.0",
-    "sass": "^1.58.3",
-    "vite": "^4.1.0"
-  }
+    "name": "swashweb",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@hookform/resolvers": "^2.9.11",
+        "@reduxjs/toolkit": "^1.9.3",
+        "firebase": "^9.17.1",
+        "leaflet": "^1.9.3",
+        "leaflet-geosearch": "^3.7.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-hook-form": "^7.43.2",
+        "react-icons": "^4.7.1",
+        "react-leaflet": "^4.2.1",
+        "react-redux": "^8.0.5",
+        "react-router-dom": "^6.8.1",
+        "react-stacked-center-carousel": "^1.0.12",
+        "zod": "^3.20.6",
+        "zustand": "^4.3.3"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.27",
+        "@types/react-dom": "^18.0.10",
+        "@vitejs/plugin-react": "^3.1.0",
+        "autoprefixer": "^10.4.13",
+        "postcss": "^8.4.21",
+        "sass": "^1.58.3",
+        "tailwindcss": "^3.2.7",
+        "vite": "^4.1.0"
+    }
 }

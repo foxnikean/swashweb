@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { RiImageAddLine } from "react-icons/ri";
 import { Link, useNavigate } from "react-router-dom";
 import handleUpload from "../../services/auth/AddImage";
+import { auth } from "../../utils/firebase";
 const AddProfilePic = () => {
   const navigate = useNavigate()
   const [file, setFile] = useState();
@@ -11,7 +12,7 @@ const AddProfilePic = () => {
   return (
     <div className='form-container'>
       <div className='form-wrapper'>
-        <h3 className='form-header'>Profil Resmi Ekle</h3>
+        <h3 className='form-header'>Profil Resmi</h3>
         <div className='image-container'>
           {file ? (
             <img

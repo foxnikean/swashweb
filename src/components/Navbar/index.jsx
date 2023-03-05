@@ -43,17 +43,17 @@ const Navbar = () => {
     dispatch(getUserAsync())
   }, [user]);
   return (
-    <div className='nav-container'>
+    <div className='nav-container '>
       <nav className='nav'>
         <img onClick={handleLogout} src={logo} alt='' />
         <ul className='nav-list'>
           {navItems.map((item, i) => (
             <Link key={i} className='nav-link' to={item.path}>
               <span className='icon'>{item.icon}</span>{" "}
-              <span>{item.label}</span>{" "}
+              <span className="">{item.label}</span>{" "}
             </Link>
           ))}
-          <Link to='/register' className='user-link'>
+          <Link to={user ? "/profile" : "/register"} className='user-link'>
             <img className="user-pic" src={user ? user.photoURL : "profile-pic"} alt='profilePic' />{" "}
             <span>{user ? user.displayName : "Kayıt Ol"}</span>
           </Link>
