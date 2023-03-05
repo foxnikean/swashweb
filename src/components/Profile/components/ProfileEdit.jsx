@@ -1,5 +1,5 @@
 import React from "react";
-import useAuthentication from "../../../utils/useAuthHook";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useForm } from "react-hook-form";
@@ -7,6 +7,7 @@ import { BiEdit } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import UpdateUser from "../../../services/auth/UpdateUser";
 import { useSelector } from "react-redux";
+import useAuthentication from "../../../services/UseAuthHook";
 const schema = z.object({
   name: z.string().min(3),
   email: z.string().min(1),
