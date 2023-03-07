@@ -17,37 +17,6 @@ import EventAdd from "../../services/event/EventAdd";
 import uuid from "react-uuid";
 
 const AddEvent = () => {
-  const [rules, setRules] = useState([
-    {
-      checked: false,
-      text: "Girişlerde kadın ve erkek oranına dikkat edilecektir.",
-    },
-    {
-      checked: false,
-      text: "Girişlerde kadın ve erkek oranına dikkat edilecektir.",
-    },
-    {
-      checked: false,
-      text: "Girişlerde kadın ve erkek oranına dikkat edilecektir.",
-    },
-    {
-      checked: false,
-      text: "Girişlerde kadın ve erkek oranına dikkat edilecektir.",
-    },
-    {
-      checked: false,
-      text: "Girişlerde kadın ve erkek oranına dikkat edilecektir.",
-    },
-    {
-      checked: false,
-      text: "Girişlerde kadın ve erkek oranına dikkat edilecektir.",
-    },
-    {
-      checked: false,
-      text: "Girişlerde kadın ve erkek oranına dikkat edilecektir.",
-    },
-  ]);
-  const [isAddRuleActive, setIsAddRuleActive] = useState(false);
   const [url, setUrl] = useState(""); // Handle file upload event and update state
   const [vidUrl, setVidUrl] = useState(""); // Handle file upload event and update state
   const [tickets,setTickets] = useState([]);
@@ -58,7 +27,7 @@ const AddEvent = () => {
     formState: { errors },
   } = useForm({});
   const onSubmit = (data) => {
-    EventAdd(data,url,vidUrl);
+    EventAdd(data,url,vidUrl,tickets);
   };
   return (
     <div className='add-container grid-cols-2'>
@@ -91,7 +60,7 @@ const AddEvent = () => {
                 options={[
                   { value: "male", text: "Erkek" },
                   { value: "male", text: "Erkek" },
-                  -{ value: "male", text: "Erkek" },
+                  { value: "male", text: "Erkek" },
                 ]}
               />
             )}
@@ -185,10 +154,17 @@ const AddEvent = () => {
           name='description'
           control={control}
           render={({ field: { onChange, value } }) => (
-            <TextArea value={value} onChange={onChange} title='Mekan Adresi' />
+            <TextArea value={value} onChange={onChange} title='Açıklama' />
           )}
         />
-        <div className='container-grid mt-3'>
+         <Controller
+          name='rules'
+          control={control}
+          render={({ field: { onChange, value } }) => (
+            <TextArea value={value} onChange={onChange} title='Kurallar' />
+          )}
+        />
+        {/* <div className='container-grid mt-3'>
           <span className='input-title'>Etkinlik Kuralları</span>
           {isAddRuleActive ? (
             <form
@@ -231,7 +207,7 @@ const AddEvent = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
         <div className='grid grid-cols-2 grid-rows-2 gap-8 mt-3 first-letter:'>
           <Controller
             name='instaUrl'

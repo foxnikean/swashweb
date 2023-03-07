@@ -44,9 +44,9 @@ const AddVid = ({setVidUrl, vidUrl}) => {
       {file ? (
       <iframe className="mx-auto w-full h-full" src={URL.createObjectURL(file)} frameborder="0"></iframe>
       ) : (
-        <div className='w-full bg-gray-500 flex items-center justify-center h-64 rounded-xl'>
+        <div className='w-64 mx-auto h-96 bg-gray-500 flex items-center justify-center  rounded-xl'>
           <label
-            className='w-full h-full flex items-center justify-center text-6xl text-bgwhite'
+            className='cursor-pointer w-32 h-full flex items-center justify-center text-6xl text-bgwhite'
             htmlFor='vid'
           >
             <BiPlusCircle />

@@ -9,10 +9,12 @@ const AddTicket = ({setTickets, tickets}) => {
         Etkinlik Biletleri
       </span>
       <div className="flex flex-col gap-2 my-4">
-        <Button />
-        <Button />
+        {tickets.map((ticket,i) => (
+          <Button text={ticket.name} subText="sil" key={i}/>
+        ))}
       </div>
       <TicketForm setTickets={setTickets} tickets={tickets} />
+      
     </div>
   );
 };

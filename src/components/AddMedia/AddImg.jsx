@@ -46,7 +46,7 @@ const AddImg = ({setUrl, url}) => {
       ) : (
         <div className='w-full bg-gray-500 flex items-center justify-center h-64 rounded-xl'>
           <label
-            className='w-full h-full flex items-center justify-center text-6xl text-bgwhite'
+            className='cursor-pointer w-full h-full flex items-center justify-center text-6xl text-bgwhite'
             htmlFor='img'
           >
             <BiPlusCircle />
