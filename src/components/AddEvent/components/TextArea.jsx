@@ -1,6 +1,6 @@
 import React from "react";
 
-const TextArea = ({ title }) => {
+const TextArea = ({ title,onChange, value }) => {
   return (
     <div className='container-grid'>
       <span className='input-title'>{title}</span>
@@ -10,6 +10,8 @@ const TextArea = ({ title }) => {
         id=''
         cols='30'
         rows='10'
+        onChange={onChange}
+        value={value}
       ></textarea>
     </div>
   );

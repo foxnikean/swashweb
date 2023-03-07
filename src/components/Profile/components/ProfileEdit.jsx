@@ -9,10 +9,11 @@ import UpdateUser from "../../../services/auth/UpdateUser";
 import { useSelector } from "react-redux";
 import useAuthentication from "../../../services/UseAuthHook";
 const schema = z.object({
-  name: z.string().min(3),
-  email: z.string().min(1),
-  cell: z.number().min(1),
-  gender: z.string(),
+  name: z.string().optional(),
+  email: z.string().optional(),
+  cell: z.string().optional(),
+  gender: z.string().optional(),
+  description: z.string().optional(),
 });
 const ProfileEdit = () => {
   const userData = useSelector((state) => state.userData.data);
@@ -25,8 +26,8 @@ const ProfileEdit = () => {
   } = useForm({
     resolver: zodResolver(schema),
   });
-  const onSubmit = () => {
-    console.log("kelam")
+  const onSubmit = (data) => {
+    UpdateUser(data)
   };
   return (
     <div className='pedit-container'>
@@ -41,7 +42,13 @@ const ProfileEdit = () => {
           </button>
         </div>
         <div className='pedit-btn-group'>
-         
+          <button
+            form='user-form'
+            onClick={handleSubmit(onSubmit)}
+            type='submit'
+          >
+            Kaydol
+          </button>
           <button>Submit</button>
           <button>Submit</button>
         </div>
@@ -65,8 +72,8 @@ const ProfileEdit = () => {
           </div>
           <div className='input-container'>
             <span>Telefon Numarası</span>
-            <input type='tel' {...register("cell")} />
-            {errors.email?.message && (
+            <input type='string' {...register("cell")} />
+            {errors.cell?.message && (
               <p className='form-error'>{errors.cell?.message}</p>
             )}
           </div>
@@ -91,9 +98,6 @@ const ProfileEdit = () => {
               <p className='form-error'>{errors.email?.message}</p>
             )}
           </div>
-          <button form='user-form' type='submit'>
-            Kaydol
-          </button>
         </form>
       </div>
     </div>

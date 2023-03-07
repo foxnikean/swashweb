@@ -1,10 +1,10 @@
 import React from "react";
 
-const Input = ({ type, title,setRules,rules }) => {
+const Input = ({ type, title ,onChange, value  }) => {
    return (
     <div className='container-grid'>
       <span className='input-title'>{title}</span>
-      <input className='add-input' type={type} />
+      <input className='add-input' onChange={onChange} value={value} type={type} />
     </div>
   );
 };

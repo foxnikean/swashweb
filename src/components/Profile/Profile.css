@@ -1,0 +1,265 @@
+.profile-container {
+  padding: 4em 11em;
+  width: 100%;
+  margin-left: 303px;
+  min-height: 100vh;
+  background-color: #D8D9CF;
+}
+
+.pnav-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pnav-link {
+  color: #472183;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.selected {
+  text-decoration: underline;
+}
+
+.profile-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  margin: 4.5em 0 2em 0;
+}
+
+.profile-header::after {
+  content: "";
+  height: 2px;
+  background-color: #060606;
+  width: 100%;
+}
+
+.profile-header span {
+  width: 25%;
+  font-size: 1.5rem;
+}
+
+.pedit-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80%;
+}
+
+.pedit-container .pedit-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.pedit-container .pedit-left img {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  border: 2px solid #472183;
+}
+
+.pedit-container .pedit-left .pedit-img-container {
+  position: relative;
+}
+
+.pedit-container .pedit-left .pedit-img-icon {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 0;
+  background: none;
+  border: 2px solid #472183;
+  padding-top: 0.25em;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  right: -20px;
+  color: #472183;
+  cursor: pointer;
+}
+
+.pedit-container .pedit-left .pedit-btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3em;
+}
+
+.pedit-container .pedit-left .pedit-btn-group button {
+  font-size: 1.25rem;
+  width: 250px;
+  height: 50px;
+  background: none;
+  border: 2px solid #472183;
+  border-radius: 100px;
+}
+
+.pedit-container .pedit-right {
+  width: 60%;
+}
+
+.pedit-container .pedit-right form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.pedit-container .pedit-right form .input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.pedit-container .pedit-right form .input-container span {
+  font-size: 1.5rem;
+  color: #472183;
+}
+
+.pedit-container .pedit-right form .input-container input {
+  color: #060606;
+  margin-bottom: 2em;
+}
+
+.pedit-container .pedit-right form .input-container .form-error {
+  color: #472183;
+}
+
+.pedit-container .pedit-right form .input-container textarea {
+  font-size: 1em;
+  outline: none;
+  border: none;
+  background: none;
+  border-bottom: 2px solid #472183;
+}
+
+.pedit-container .pedit-right form .input-container select {
+  height: 50px;
+  outline: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #472183;
+}
+
+.ticket-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30%;
+  min-width: 300px;
+  gap: 2.5em;
+  background-color: #e7e7e7;
+  padding: .75em;
+  border-radius: 10px;
+}
+
+.ticket-container .ticket-header {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.ticket-container .ticket-party-infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  gap: 1em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.ticket-container .ticket-party-infos .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+}
+
+.ticket-container p {
+  text-align: justify;
+}
+
+.ticket-container .ticket-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ticket-container .ticket-bottom .ticket-user-infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .5em;
+}
+
+.ticket-container .ticket-bottom .qr-code {
+  mix-blend-mode: darken;
+}
+
+.tickets-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2em;
+}
+/*# sourceMappingURL=Profile.css.map */
