@@ -27,9 +27,9 @@ const EventsPage = () => {
       <SearchBar handleSearch={handleSearch} setSearchQuerry={setSearchQuerry}/>
       <div className="grid grid-cols-3 gap-16 mt-4">
         {searchQuerry ? data.map((d,i) => (
-            <Card key={i} location={d.placeName} time={d.eventTime} name={d.eventName} img={d.image} event={d}/>
+            <Card key={i} location={d.place} time={d.startTime} name={d.name} img={d.image} event={d}/>
         )): events.map((event,i) => (
-            <Card key={i} location={event.placeName} time={event.eventTime} name={event.eventName} img={event.image} event={event}/>
+            <Card key={i} location={event.place} time={event.startTime} name={event.name} img={event.image} event={event}/>
         ))}
       </div>
     </div>
