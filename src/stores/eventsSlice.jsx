@@ -24,6 +24,7 @@ export const eventsSlice = createSlice({
   extraReducers: {
     [getEventsAsync.fulfilled]: (state, action) => {
       state.data = action.payload;
+      console.log(action.payload)
     },
     [getEventsAsync.rejected]: (state, action) => {
       state.error = action.error.message;

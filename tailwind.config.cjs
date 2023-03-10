@@ -10,7 +10,7 @@ module.exports = {
                 spurple: "#58287F",
                 bgwhite: "#C0BCCA",
                 bgdark: "#222222",
-                white: "#D9D9D9"
+                white: "#D9D9D9",
             },
         },
     },

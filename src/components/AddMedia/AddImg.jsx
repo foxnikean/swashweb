@@ -11,7 +11,6 @@ const AddImg = ({setUrl, url}) => {
 
   function handleChange(event) {
     setFile(event.target.files[0]);
-    setFileUrl(URL.createObjectURL(file));
   }
   const handleUpload = () => {
     if (!file) {
@@ -54,7 +53,7 @@ const AddImg = ({setUrl, url}) => {
         </div>
       )}
 
-      <input className='hidden' onChange={handleChange} type='file' id='img'  accept='/image/*' />
+      <input className='hidden' onChange={handleChange} type='file' id='img'  />
       {file ? 
       <button
       onClick={handleUpload}

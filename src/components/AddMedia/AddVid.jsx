@@ -11,7 +11,6 @@ const AddVid = ({setVidUrl, vidUrl}) => {
 
   function handleChange(event) {
     setFile(event.target.files[0]);
-    setFileUrl(URL.createObjectURL(file));
   }
   const handleUpload = () => {
     if (!file) {
@@ -42,7 +41,7 @@ const AddVid = ({setVidUrl, vidUrl}) => {
   return (
     <div className='w-full  mt-6 '>
       {file ? (
-      <iframe className="mx-auto w-full h-full" src={URL.createObjectURL(file)} frameborder="0"></iframe>
+      <iframe className="mx-auto w-full h-full" src={URL.createObjectURL(file)} ></iframe>
       ) : (
         <div className='w-64 mx-auto h-96 bg-gray-500 flex items-center justify-center  rounded-xl'>
           <label

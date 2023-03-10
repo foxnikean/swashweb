@@ -15,6 +15,7 @@ import OrganisatorPage from "./components/OrganisatorPage";
 import OrgRegister from "./components/BasicForms/OrgRegister";
 import Footer from "./components/Footer";
 import EventsPage from "./components/EventsPage";
+import EventMain from "./components/EventMain";
 function App() {
   return (
     <div className='App'>
@@ -30,6 +31,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/events' element={<EventsPage />} />
           <Route path='/org' element={<OrganisatorPage />} />
+          <Route path='/event/:id' element={<EventMain />} />
         </Routes>
       </Provider>
     </div>
