@@ -2,10 +2,12 @@
     margin-left: 303px;
     width: 100%;
     background-color: #d9d9d9;
-    height: 100vh;
+    min-height: 100vh;
+    padding-bottom: 3.2em;
     padding-top: 3.25em;
     background-image: url("../../assets/home-bg.png");
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .top-carousel-header {

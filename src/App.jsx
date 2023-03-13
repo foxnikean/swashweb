@@ -16,23 +16,37 @@ import OrgRegister from "./components/BasicForms/OrgRegister";
 import Footer from "./components/Footer";
 import EventsPage from "./components/EventsPage";
 import EventMain from "./components/EventMain";
+import OrganisatorLand from "./components/OrganisatorLanding";
+import useAuthentication from "./services/UseAuthHook";
 function App() {
+  const user = useAuthentication();
   return (
     <div className='App'>
       <Provider store={store}>
         <Navbar />
-        <Routes className='routes'>
-          <Route path='/' element={<Homepage />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-          <Route path='/OrgRegister' element={<OrgRegister />} />
-          <Route path='/addpic' element={<AddProfilePic />} />
-          <Route path='/profile' element={<Profile />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/events' element={<EventsPage />} />
-          <Route path='/org' element={<OrganisatorPage />} />
-          <Route path='/event/:id' element={<EventMain />} />
-        </Routes>
+        {user ? (
+          <Routes className='routes'>
+              <Route path='/' element={<Homepage />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/OrgRegister' element={<OrgRegister />} />
+            <Route path='/addpic' element={<AddProfilePic />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/events' element={<EventsPage />} />
+            <Route path='/event/:id' element={<EventMain />} />
+            <Route path='/org' element={<OrganisatorPage />} />
+
+          </Routes>
+        ) : (
+          <Routes className='routes'>
+           <Route path='/' element={<Homepage />} />
+            <Route path='/addpic' element={<AddProfilePic />} />
+            <Route path='/profile' element={<Profile />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/events' element={<EventsPage />} />
+            <Route path='/event/:id' element={<EventMain />} />
+          </Routes>
+        )}
       </Provider>
     </div>
   );

@@ -18,5 +18,6 @@ export default function EventAdd(data, url,vidUrl,tickets) {
       video:vidUrl,
       tickets:tickets,
       rules:data.rules,
+      uuid:auth.currentUser.uid,
     });
 }

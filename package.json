@@ -9,8 +9,10 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "@egjs/react-flicking": "^4.10.8",
         "@hookform/resolvers": "^2.9.11",
         "@reduxjs/toolkit": "^1.9.3",
+        "@trendyol-js/react-carousel": "^3.0.2",
         "firebase": "^9.17.1",
         "leaflet": "^1.9.3",
         "leaflet-geosearch": "^3.7.0",
@@ -19,6 +21,7 @@
         "react-hook-form": "^7.43.2",
         "react-icons": "^4.7.1",
         "react-leaflet": "^4.2.1",
+        "react-multi-carousel": "^2.8.2",
         "react-redux": "^8.0.5",
         "react-router-dom": "^6.8.1",
         "react-stacked-center-carousel": "^1.0.12",
