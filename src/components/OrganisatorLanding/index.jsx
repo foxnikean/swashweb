@@ -4,7 +4,7 @@ import diagram from "../../assets/org-diagram.png";
 const OrganisatorLand = () => {
   const navigate = useNavigate();
   return (
-    <div className='flex flex-col items-center pt-56 bg-bgwhite min-h-screen'>
+    <div className='flex flex-col items-center pt-56 bg-slate-50 min-h-screen'>
       <div className='flex flex-col items-center justify-center w-5/6'>
         <span className='text-6xl font-bold text-center  leading-relaxed'>
           Neden organizasyon paylaşımları Swash’te olmalı?
