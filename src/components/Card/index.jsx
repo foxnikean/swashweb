@@ -6,7 +6,7 @@ const Card = ({location, time, name,img, event , url, price}) => {
   const navigate = useNavigate();
   return (
     <div className='flex flex-col w-80 gap-4 bg-[#f6f6f6] p-4 rounded-[21px] cursor-pointer h-[420px]' onClick={() =>  navigate(`/Event/${event.name}`, { state: { event } })}>
-      <img src={url ? url : img} alt='' />
+      <img className="w-full h-40" src={url ? url : img} alt='' />
       <span className="self-center font-bold text-xl">{name}</span>
       <EventInfo type='place' text={location} />
       <EventInfo type='date' text={time}/>

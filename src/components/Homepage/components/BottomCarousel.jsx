@@ -52,7 +52,7 @@ const BottomCarousel = () => {
       <Carousel
         infinite={true}
         responsive={responsive}
-        removeArrowOnDeviceType={["mobile", "tablet"]}
+        removeArrowOnDeviceType={["mobile", "tablet", "desktop"]}
         ssr
         centerMode={true}
         customLeftArrow={

@@ -3,7 +3,7 @@ import { BiSearch } from "react-icons/bi";
 
 const SearchBar = ({ handleSearch, setSearchQuerry }) => {
   return (
-    <div className='w-full relative'>
+    <div className='w-full relative border-gray-500 border-[0.5px]'>
       <input
         type='text'
         className='w-full bg-white h-16 rounded-md pl-20 min-w-96'
